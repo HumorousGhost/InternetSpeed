@@ -43,7 +43,7 @@ open class InternetSpeed {
     
     private func startSpeed() {
         if timer == nil {
-            if #available(iOS 10.0, *) {
+            if #available(iOS 10.0, macOS 10.12, *) {
                 self.timer = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: true, block: { [unowned self] _ in
                     self.getCurrentSpeed()
                 })
